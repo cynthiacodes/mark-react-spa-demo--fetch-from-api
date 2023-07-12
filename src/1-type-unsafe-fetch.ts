@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const jokeResponse = [
+const jokeResponse: any = [
   {
     id: 117,
     type: "general",
@@ -31,7 +31,7 @@ async function printProgrammingJoke() {
     "https://jokestemp.neillbogie.repl.co/jokes/programming/random"
   );
   const jsonBody = await response.json();
-  // console.log(jsonBody) /* de-comment to troubleshoot */
+  console.log(jsonBody) /* de-comment to troubleshoot */
   /** TS doesn't know that jsonBody is an array */
   console.log(jsonBody.setup, jsonBody.punchline);
 }
